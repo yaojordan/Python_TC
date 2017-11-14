@@ -4,12 +4,12 @@ import sys
 import shutil
 import glob
 
-file_path = r'D:\CoreTracer\Shuttle\s1743\CoreTracer_x86\workspace\CachedFiles'
+file_path = r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX '
 
 # TC304
-gdbcmds = glob.glob('D:\CoreTracer\Shuttle\s1743\CoreTracer_x86\workspace\CachedFiles\*.gdbcmds')
-gdb_index = glob.glob('D:\CoreTracer\Shuttle\s1743\CoreTracer_x86\workspace\CachedFiles\*.gdb-index')
-gdb_index_elf = glob.glob('D:\CoreTracer\Shuttle\s1743\CoreTracer_x86\workspace\CachedFiles\*.gdb-index.elf')
+gdbcmds = glob.glob('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ')
+gdb_index = glob.glob('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ')
+gdb_index_elf = glob.glob('XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ')
 
 try:
     while os.path.isdir(file_path):
