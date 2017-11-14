@@ -11,30 +11,30 @@ def modify_ini(ini_file):
 
         for i, line in enumerate(lines):
 
-            if line.startswith("-DVERSION=") and sys.argv[1] == "TC207":
+            if line.startswith("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ") and sys.argv[1] == "TC207":
                 lines.remove(line)
-                lines.insert(12, "-DVERSION=AutoTesting\n" )
+                lines.insert(12, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX " )
 
-            if line.startswith("-DENABLE_GDB_INDEX_ELF="):
+            if line.startswith("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX "):
                 if sys.argv[1] == "TC304":
                     lines[i] = lines[i].replace("false", "true")
                 elif sys.argv[1] == "TC315":
-                    tmp = lines[i].strip() + "\n-DENABLE_DEFAULT_WATCH_ADDRESS_COLUMN=false\n"
+                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =false\n"
                     lines[i] = tmp
                 elif sys.argv[1] == "TC348":
-                    tmp = lines[i].strip() + "\n-DHIDE_PREFERENCE_PAGES=Workspaces\n"
+                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =Workspaces\n"
                     lines[i] = tmp
                 elif sys.argv[1] == "TC361":
-                    tmp = lines[i].strip() + "\n-DPROMPT_NEW_DISASSEMBLY_VIEW=true\n"
+                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =true\n"
                     lines[i] = tmp
                 elif sys.argv[1] == "TC361":
-                    tmp = lines[i].strip() + "\n-DPROMPT_NEW_DISASSEMBLY_VIEW=true\n"
+                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =true\n"
                     lines[i] = tmp
                 elif sys.argv[1] == "TC365":
-                    tmp = lines[i].strip() + "\n-DPRESERVE_SYMBOLS=true\n"
+                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =true\n"
                     lines[i] = tmp
                 elif sys.argv[1] == "TC315":
-                    tmp = lines[i].strp() + "\n-DENABLE_DEFAULT_WATCH_ADDRESS_COLUMN=false\n"
+                    tmp = lines[i].strp() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =false\n"
                     lines[i] = tmp
     f.close()
 
@@ -46,7 +46,7 @@ def modify_ini(ini_file):
 
 
 try:
-    modify_ini(r'C:\Users\vend_dt076\Desktop\Test\CoreTracer.ini')
+    modify_ini(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 except Exception as e:
     print(e)
