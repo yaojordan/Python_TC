@@ -11,7 +11,7 @@ def delete(ini_file):
         #print(lines)
         if sys.argv[1] == "TC304":
             for i, line in enumerate(lines):
-                if line.startswith("-DENABLE_GDB_INDEX_ELF="):
+                if line.startswith("-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ="):
                     lines[i] = lines[i].replace("true", "false")
                     lines.pop()
         else:
@@ -24,7 +24,7 @@ def delete(ini_file):
     f.close()
 
 try:
-    delete(r'C:\Users\vend_dt076\Desktop\Test\CoreTracer.ini')
+    delete(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ')
 
 except Exception as e:
     print(e)
