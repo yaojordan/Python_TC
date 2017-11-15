@@ -34,7 +34,7 @@ def modify_ini(ini_file):
                     tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =true\n"
                     lines[i] = tmp
                 elif sys.argv[1] == "TC315":
-                    tmp = lines[i].strp() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =false\n"
+                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =false\n"
                     lines[i] = tmp
     f.close()
 
