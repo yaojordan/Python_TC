@@ -11,31 +11,27 @@ def modify_ini(ini_file):
 
         for i, line in enumerate(lines):
 
-            if line.startswith("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX ") and sys.argv[1] == "TC207":
+            if line.startswith("-XXX=") and sys.argv[1] == "TC207":
                 lines.remove(line)
-                lines.insert(12, "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX " )
+                lines.insert(12, "-XXX=XXX\n" )
 
-            if line.startswith("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX "):
-                if sys.argv[1] == "TC304":
-                    lines[i] = lines[i].replace("false", "true")
-                elif sys.argv[1] == "TC315":
-                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =false\n"
+            if line.startswith("-XXX=") and sys.argv[1] == "TC304":
+                lines[i] = lines[i].replace("false", "true")
+
+            if line.startswith("-XXX="):
+
+                if sys.argv[1] == "TC315":
+                    tmp = lines[i].strip() + "\n-XXX=false\n"
                     lines[i] = tmp
                 elif sys.argv[1] == "TC348":
-                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =Workspaces\n"
+                    tmp = lines[i].strip() + "\n-XXX=XXX\n"
                     lines[i] = tmp
-                elif sys.argv[1] == "TC361":
-                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =true\n"
+                elif sys.argv[1] == "TC206":
+                    tmp = lines[i].strip() + "\n-XXX=http://xxx/checker.php\n"
                     lines[i] = tmp
-                elif sys.argv[1] == "TC361":
-                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =true\n"
-                    lines[i] = tmp
-                elif sys.argv[1] == "TC365":
-                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =true\n"
-                    lines[i] = tmp
-                elif sys.argv[1] == "TC315":
-                    tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX =false\n"
-                    lines[i] = tmp
+                #elif sys.argv[1] == "TC365":
+                #    tmp = lines[i].strip() + "\n-DPRESERVE_SYMBOLS=true\n"
+                #    lines[i] = tmp
     f.close()
 
     with open(ini_file, 'r+') as f:
@@ -46,7 +42,7 @@ def modify_ini(ini_file):
 
 
 try:
-    modify_ini(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+    modify_ini(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 except Exception as e:
     print(e)
