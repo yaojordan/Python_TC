@@ -20,23 +20,21 @@ def modify_ini(ini_file):
 			#if line.startswith("-DPRESERVE_SYMBOLS="):
 			if line.startswith("-DENABLE_GDB_INDEX_ELF="):	
 				if sys.argv[1] == "TC315":
-					tmp = lines[i].strip() + "\n-DENABLE_DEFAULT_WATCH_ADDRESS_COLUMN=false\n"
+					tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=false\n"
 					lines[i] = tmp
 				elif sys.argv[1] == "TC348":
-					tmp = lines[i].strip() + "\n-DHIDE_PREFERENCE_PAGES=Workspaces\n"
+					tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=Workspaces\n"
 					lines[i] = tmp
 				elif sys.argv[1] == "TC206":
-					tmp = lines[i].strip() + "\n-DLICENSE_WEB=http://xxx/checker.php\n"
+					tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=http://xxx/checker.php\n"
 					lines[i] = tmp
 				elif sys.argv[1] == "TC258":
-					tmp = lines[i].strip() + "\n-DJYTHON_LIB=D:\\tools\\CoreTracer_x86\\msys\\JythonLib\n"
+					tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n"
 					lines[i] = tmp
 				elif sys.argv[1] == "TC257":
-					tmp = lines[i].strip() + "\n-DCONFIG_TARGET=D:\\tools\\CoreTracer_x86\\msys\\Target\n"
+					tmp = lines[i].strip() + "\n-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX\n"
 					lines[i] = tmp
-				#elif sys.argv[1] == "TC365":
-				#	tmp = lines[i].strip() + "\n-DPRESERVE_SYMBOLS=true\n"
-				#	lines[i] = tmp
+
 				
 	f.close()
 	
@@ -46,7 +44,7 @@ def modify_ini(ini_file):
 	f.close()
 
 try:
-	modify_ini(r'D:\tools\CoreTracer_x86\CoreTracer.ini')
+	modify_ini(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 	
 except Exception as e:
 	print e
