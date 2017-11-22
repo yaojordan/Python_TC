@@ -12,38 +12,38 @@ def delete(ini_file):
 		
 		if sys.argv[1] == "TC304":
 			for i, line in enumerate(lines):
-				if line.startswith("-DENABLE_GDB_INDEX_ELF="):
+				if line.startswith("-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX="):
 					lines[i] = lines[i].replace("true", "false")
 					lines.pop()
 					
 		elif sys.argv[1] == "TC315":
 			for i, line in enumerate(lines):
-				if line.startswith("-DENABLE_DEFAULT_WATCH_ADDRESS_COLUMN=false"):
-					lines[i] = lines[i].replace("-DENABLE_DEFAULT_WATCH_ADDRESS_COLUMN=false", "")
+				if line.startswith("-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=false"):
+					lines[i] = lines[i].replace("-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=false", "")
 					lines.pop()
 					
 		elif sys.argv[1] == "TC348":
 			for i, line in enumerate(lines):
-				if line.startswith("-DHIDE_PREFERENCE_PAGES=Workspaces"):
-					lines[i] = lines[i].replace("-DHIDE_PREFERENCE_PAGES=Workspaces", "")
+				if line.startswith("-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=Workspaces"):
+					lines[i] = lines[i].replace("-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX=Workspaces", "")
 					lines.pop()
 					
 		elif sys.argv[1] == "TC206":
 			for i, line in enumerate(lines):
-				if line.startswith("-DLICENSE_WEB=http://xxx/checker.php"):
-					lines[i] = lines[i].replace("-DLICENSE_WEB=http://xxx/checker.php", "")
+				if line.startswith("-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXp"):
+					lines[i] = lines[i].replace("-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "")
 					lines.pop()
 					
 		elif sys.argv[1] == "TC258":
 			for i, line in enumerate(lines):
-				if line.startswith("-DJYTHON_LIB=D:\\tools\\CoreTracer_x86\\msys\\JythonLib"):
-					lines[i] = lines[i].replace("-DJYTHON_LIB=D:\\tools\\CoreTracer_x86\\msys\\JythonLib", "")
+				if line.startswith("-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"):
+					lines[i] = lines[i].replace("-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "")
 					lines.pop()
 					
 		elif sys.argv[1] == "TC257":
 			for i, line in enumerate(lines):
-				if line.startswith("-DCONFIG_TARGET=D:\\tools\\CoreTracer_x86\\msys\\Target"):
-					lines[i] = lines[i].replace("-DCONFIG_TARGET=D:\\tools\\CoreTracer_x86\\msys\\Target", "")
+				if line.startswith("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"):
+					lines[i] = lines[i].replace("-XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "")
 					lines.pop()					
 		
 		else:
@@ -57,7 +57,7 @@ def delete(ini_file):
 	f.close()
 
 try:
-	delete(r'D:\tools\CoreTracer_x86\CoreTracer.ini')
+	delete(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
 except Exception as e:
 	print e
