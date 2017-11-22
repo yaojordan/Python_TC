@@ -4,19 +4,17 @@ import sys
 import shutil
 import glob
 
-file_path = r'D:\tools\CoreTracer_x86\workspace\CachedFiles'
+file_path = r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
 
 #TC304
-gdbcmds = glob.glob(r'D:\tools\CoreTracer_x86\workspace\CachedFiles\*.gdbcmds')
-gdb_index = glob.glob(r'D:\tools\CoreTracer_x86\workspace\CachedFiles\*.gdb-index')
-gdb_index_elf = glob.glob(r'D:\tools\CoreTracer_x86\workspace\CachedFiles\*.gdb-index.elf')
+gdbcmds = glob.glob(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+gdb_index = glob.glob(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
+gdb_index_elf = glob.glob(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXindex.elf')
 
 #TC259
-snapshot = glob.glob(r'D:\tools\CoreTracer_x86\workspace\SNAPSHOT*')
+snapshot = glob.glob(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 
-#print gdbcmds
-#print gdb_index
-#print gdb_index_elf
+
 
 try:
 	while os.path.isdir(file_path):
