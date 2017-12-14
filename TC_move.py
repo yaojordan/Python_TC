@@ -58,7 +58,33 @@ try:
 			shutil.copy(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX', r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX')
 			sys.exit(0)
 		
+		if sys.argv[1] == "TC190":
+		
+			if os.path.exists(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXCoverage'):
+				sys.exit(0)
+			else:
+				shutil.copytree(rXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXoverage', r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXCoverage')
 			
+			if os.path.exists(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXRegister'):
+				sys.exit(0)
+			else:
+				shutil.copytree(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXRegister', r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXRegister')
+				
+			if os.path.exists(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXtOption'):
+				sys.exit(0)
+			else:
+				shutil.copytree(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOption', r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXOption')
+				
+			if os.path.exists(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXarm'):
+				sys.exit(0)
+			else:
+				shutil.copytree(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXarm', r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXarm')			
+
+			if os.path.exists(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXarm'):
+				sys.exit(0)
+			else:
+				shutil.copytree(r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXarm', r'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXarm')
+						
 		#if sys.argv[1] == "TC267start":
 		#	shutil.copy()
 		#	sys.exit(0)
